@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0ED81491-44B3-4DC5-AFA8-B202181BE072}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BergerLeadCRMSchedular.DB</RootNamespace>
+    <AssemblyName>BergerLeadCRMSchedular.DB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\BergerLeadCRMSchedular.Documents\ThirdPartyDLL\Newtonsoft.Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BergerDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BergerDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CRMBulkDailyhuntLeads.cs" />
+    <Compile Include="CRMBulkFacebookECFLeads.cs" />
+    <Compile Include="CRMBulkFacebookLeads.cs" />
+    <Compile Include="CRMBulkFacebookSBELeads.cs" />
+    <Compile Include="CRMBulkGoogleLeads.cs" />
+    <Compile Include="CRMBulkInstagramLeads.cs" />
+    <Compile Include="CRMBulkLinkedInLeads.cs" />
+    <Compile Include="CRMLeadAskConsultant.cs" />
+    <Compile Include="CRMLeadBusinessQuery.cs" />
+    <Compile Include="CRMLeadCampaignBusinessQuery.cs" />
+    <Compile Include="CRMLeadConstructionChemicalEnquiries.cs" />
+    <Compile Include="CRMLeadHomePaintingEnquiries.cs" />
+    <Compile Include="CRMLeadIndustrialUsersEnquiries.cs" />
+    <Compile Include="CRMLeadProductEnquiries.cs" />
+    <Compile Include="CRMLeadUndercoatsEnquiries.cs" />
+    <Compile Include="CRMVendorLeads.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="BergerDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BergerDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BergerLeadCRMSchedular.ExceptionManager\BergerLeadCRMSchedular.ExceptionManager.csproj">
+      <Project>{56D9B1D2-4B14-4566-99A1-F941F3776553}</Project>
+      <Name>BergerLeadCRMSchedular.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BergerLeadCRMSchedular.Models\BergerLeadCRMSchedular.Models.csproj">
+      <Project>{84C09EEB-B1DA-43EC-B8F1-0FF2ADA92D07}</Project>
+      <Name>BergerLeadCRMSchedular.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

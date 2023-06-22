@@ -1,0 +1,2129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BergerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="CampaignBusinessQuery">
+          <Key>
+            <PropertyRef Name="CampaignBusinessQueryId" />
+          </Key>
+          <Property Name="CampaignBusinessQueryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CampaignMasterId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="Pincode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="IsValidPincode" Type="bit" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Term" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="AcceptedTerms" Type="bit" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="isReadyForHousePaint" Type="bit" />
+          <Property Name="UrlReferrer" Type="nvarchar" MaxLength="500" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="Content" Type="nvarchar" MaxLength="250" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMDailyhuntLead">
+          <Key>
+            <PropertyRef Name="CRMDailyhuntLeadId" />
+          </Key>
+          <Property Name="CRMDailyhuntLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMFacebookECFLead">
+          <Key>
+            <PropertyRef Name="CRMFacebookECFLeadId" />
+          </Key>
+          <Property Name="CRMFacebookECFLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="Term" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMFacebookLead">
+          <Key>
+            <PropertyRef Name="CRMFacebookLeadId" />
+          </Key>
+          <Property Name="CRMFacebookLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="Term" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMFacebookSBELead">
+          <Key>
+            <PropertyRef Name="CRMFacebookSBELeadId" />
+          </Key>
+          <Property Name="CRMFacebookSBELeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="Term" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="Zipcode" Type="varchar" MaxLength="20" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMGoogleLead">
+          <Key>
+            <PropertyRef Name="CRMGoogleLeadId" />
+          </Key>
+          <Property Name="CRMGoogleLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="100" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="Term" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMInstagramLead">
+          <Key>
+            <PropertyRef Name="CRMInstagramLeadId" />
+          </Key>
+          <Property Name="CRMInstagramLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CRMLeadMainStatus">
+          <Key>
+            <PropertyRef Name="CRMLeadMainStatusId" />
+          </Key>
+          <Property Name="CRMLeadMainStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CRMLeadMainStatus" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsAcive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRMLeadSubStatus">
+          <Key>
+            <PropertyRef Name="CRMLeadSubStatusId" />
+          </Key>
+          <Property Name="CRMLeadSubStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CRMLeadMainStatusId" Type="int" Nullable="false" />
+          <Property Name="CRMLeadSubStatus" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRMLinkedinLead">
+          <Key>
+            <PropertyRef Name="CRMLinkedinLeadId" />
+          </Key>
+          <Property Name="CRMLinkedinLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="crmVendorLead">
+          <Key>
+            <PropertyRef Name="crmVendorLeadId" />
+          </Key>
+          <Property Name="crmVendorLeadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostedOn" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="nvarchar" MaxLength="500" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMLeadSyncStatusId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SourceId" Type="int" />
+          <Property Name="IsVendor" Type="bit" />
+          <Property Name="UploadedBy" Type="int" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_AskConsultant">
+          <Key>
+            <PropertyRef Name="AskConsultantID" />
+          </Key>
+          <Property Name="AskConsultantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="Attachment1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Attachment2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Attachment3" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Source" Type="varchar" MaxLength="50" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_BusinessQuery">
+          <Key>
+            <PropertyRef Name="BusinessQueryID" />
+          </Key>
+          <Property Name="BusinessQueryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentID" Type="int" Nullable="false" />
+          <Property Name="QueryCategoryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Query" Type="ntext" />
+          <Property Name="Attachment" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Term" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="AcceptedTerms" Type="bit" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="isReadyForHousePaint" Type="bit" />
+          <Property Name="UrlReferrer" Type="nvarchar" MaxLength="500" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="Content" Type="nvarchar" MaxLength="250" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_ConstructionChemicalEnquiry">
+          <Key>
+            <PropertyRef Name="ConstructionChemicalEnquiryID" />
+          </Key>
+          <Property Name="ConstructionChemicalEnquiryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_HomePaintingEnquiry">
+          <Key>
+            <PropertyRef Name="HomePaintingEnquiryID" />
+          </Key>
+          <Property Name="HomePaintingEnquiryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="256" />
+          <Property Name="Email" Type="varchar" MaxLength="256" />
+          <Property Name="PaintBy" Type="varchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_IndustrialUsers_Enquiry">
+          <Key>
+            <PropertyRef Name="ProductEnquiryID" />
+          </Key>
+          <Property Name="ProductEnquiryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="250" />
+          <Property Name="Product" Type="nvarchar" MaxLength="250" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_ProductEnquiry">
+          <Key>
+            <PropertyRef Name="ProductEnquiryID" />
+          </Key>
+          <Property Name="ProductEnquiryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Medium" Type="varchar" MaxLength="100" />
+          <Property Name="Campaign" Type="varchar" MaxLength="100" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adgroup" Type="varchar" MaxLength="100" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_UnderCoatEnquiry">
+          <Key>
+            <PropertyRef Name="UnderCoatEnquiryID" />
+          </Key>
+          <Property Name="UnderCoatEnquiryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="CRMLeadId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMSourceId" Type="int" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="datetime" />
+          <Property Name="CRMLeadSubStatusId" Type="int" />
+          <Property Name="CRMRecordId" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRMCampaignLocationId" Type="int" />
+          <Property Name="CRMPincode" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_CampaignBusinessQuery_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CampaignBusinessQuery" Type="Self.CampaignBusinessQuery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CampaignBusinessQuery">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMDailyhuntLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMDailyhuntLead" Type="Self.CRMDailyhuntLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMDailyhuntLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMFacebookECFLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMFacebookECFLead" Type="Self.CRMFacebookECFLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMFacebookECFLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMFacebookLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMFacebookLead" Type="Self.CRMFacebookLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMFacebookLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMFacebookSBELead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMFacebookSBELead" Type="Self.CRMFacebookSBELead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMFacebookSBELead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMGoogleLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMGoogleLead" Type="Self.CRMGoogleLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMGoogleLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMInstagramLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMInstagramLead" Type="Self.CRMInstagramLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMInstagramLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMLeadMainStatus_CRMLeadMainStatus">
+          <End Role="CRMLeadMainStatus" Type="Self.CRMLeadMainStatus" Multiplicity="1" />
+          <End Role="CRMLeadMainStatus1" Type="Self.CRMLeadMainStatus" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadMainStatus">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Principal>
+            <Dependent Role="CRMLeadMainStatus1">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMLeadSubStatus_CRMLeadMainStatus">
+          <End Role="CRMLeadMainStatus" Type="Self.CRMLeadMainStatus" Multiplicity="1" />
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadMainStatus">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Principal>
+            <Dependent Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMLinkedinLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="CRMLinkedinLead" Type="Self.CRMLinkedinLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMLinkedinLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_crmVendorLead_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="crmVendorLead" Type="Self.crmVendorLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="crmVendorLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_AskConsultant_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_AskConsultant" Type="Self.tbl_AskConsultant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_AskConsultant">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_BusinessQuery_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_BusinessQuery" Type="Self.tbl_BusinessQuery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_BusinessQuery">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_ConstructionChemicalEnquiry" Type="Self.tbl_ConstructionChemicalEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_ConstructionChemicalEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_HomePaintingEnquiry" Type="Self.tbl_HomePaintingEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_HomePaintingEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_IndustrialUsers_Enquiry" Type="Self.tbl_IndustrialUsers_Enquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_IndustrialUsers_Enquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ProductEnquiry_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_ProductEnquiry" Type="Self.tbl_ProductEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_ProductEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId">
+          <End Role="CRMLeadSubStatus" Type="Self.CRMLeadSubStatus" Multiplicity="0..1" />
+          <End Role="tbl_UnderCoatEnquiry" Type="Self.tbl_UnderCoatEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatus">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_UnderCoatEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BergerModelStoreContainer">
+          <EntitySet Name="CampaignBusinessQuery" EntityType="Self.CampaignBusinessQuery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMDailyhuntLead" EntityType="Self.CRMDailyhuntLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMFacebookECFLead" EntityType="Self.CRMFacebookECFLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMFacebookLead" EntityType="Self.CRMFacebookLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMFacebookSBELead" EntityType="Self.CRMFacebookSBELead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMGoogleLead" EntityType="Self.CRMGoogleLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMInstagramLead" EntityType="Self.CRMInstagramLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMLeadMainStatus" EntityType="Self.CRMLeadMainStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMLeadSubStatus" EntityType="Self.CRMLeadSubStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRMLinkedinLead" EntityType="Self.CRMLinkedinLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="crmVendorLead" EntityType="Self.crmVendorLead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AskConsultant" EntityType="Self.tbl_AskConsultant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_BusinessQuery" EntityType="Self.tbl_BusinessQuery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ConstructionChemicalEnquiry" EntityType="Self.tbl_ConstructionChemicalEnquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_HomePaintingEnquiry" EntityType="Self.tbl_HomePaintingEnquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_IndustrialUsers_Enquiry" EntityType="Self.tbl_IndustrialUsers_Enquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ProductEnquiry" EntityType="Self.tbl_ProductEnquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UnderCoatEnquiry" EntityType="Self.tbl_UnderCoatEnquiry" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CampaignBusinessQuery_CRMLeadSubStatusId" Association="Self.FK_CampaignBusinessQuery_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CampaignBusinessQuery" EntitySet="CampaignBusinessQuery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMDailyhuntLead_CRMLeadSubStatusId" Association="Self.FK_CRMDailyhuntLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMDailyhuntLead" EntitySet="CRMDailyhuntLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMFacebookECFLead_CRMLeadSubStatusId" Association="Self.FK_CRMFacebookECFLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMFacebookECFLead" EntitySet="CRMFacebookECFLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMFacebookLead_CRMLeadSubStatusId" Association="Self.FK_CRMFacebookLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMFacebookLead" EntitySet="CRMFacebookLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMFacebookSBELead_CRMLeadSubStatusId" Association="Self.FK_CRMFacebookSBELead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMFacebookSBELead" EntitySet="CRMFacebookSBELead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMGoogleLead_CRMLeadSubStatusId" Association="Self.FK_CRMGoogleLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMGoogleLead" EntitySet="CRMGoogleLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMInstagramLead_CRMLeadSubStatusId" Association="Self.FK_CRMInstagramLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMInstagramLead" EntitySet="CRMInstagramLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMLeadMainStatus_CRMLeadMainStatus" Association="Self.FK_CRMLeadMainStatus_CRMLeadMainStatus">
+            <End Role="CRMLeadMainStatus" EntitySet="CRMLeadMainStatus" />
+            <End Role="CRMLeadMainStatus1" EntitySet="CRMLeadMainStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMLeadSubStatus_CRMLeadMainStatus" Association="Self.FK_CRMLeadSubStatus_CRMLeadMainStatus">
+            <End Role="CRMLeadMainStatus" EntitySet="CRMLeadMainStatus" />
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMLinkedinLead_CRMLeadSubStatusId" Association="Self.FK_CRMLinkedinLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMLinkedinLead" EntitySet="CRMLinkedinLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_crmVendorLead_CRMLeadSubStatusId" Association="Self.FK_crmVendorLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="crmVendorLead" EntitySet="crmVendorLead" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_AskConsultant_CRMLeadSubStatusId" Association="Self.FK_tbl_AskConsultant_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_AskConsultant" EntitySet="tbl_AskConsultant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_BusinessQuery_CRMLeadSubStatusId" Association="Self.FK_tbl_BusinessQuery_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_BusinessQuery" EntitySet="tbl_BusinessQuery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId" Association="Self.FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_ConstructionChemicalEnquiry" EntitySet="tbl_ConstructionChemicalEnquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId" Association="Self.FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_HomePaintingEnquiry" EntitySet="tbl_HomePaintingEnquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId" Association="Self.FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_IndustrialUsers_Enquiry" EntitySet="tbl_IndustrialUsers_Enquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ProductEnquiry_CRMLeadSubStatusId" Association="Self.FK_tbl_ProductEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_ProductEnquiry" EntitySet="tbl_ProductEnquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId" Association="Self.FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatus" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_UnderCoatEnquiry" EntitySet="tbl_UnderCoatEnquiry" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BergerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BergerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CRMLeadMainStatus" EntityType="BergerModel.CRMLeadMainStatu" />
+          <EntitySet Name="CRMLeadSubStatus" EntityType="BergerModel.CRMLeadSubStatu" />
+          <EntitySet Name="tbl_AskConsultant" EntityType="BergerModel.tbl_AskConsultant" />
+          <EntitySet Name="tbl_BusinessQuery" EntityType="BergerModel.tbl_BusinessQuery" />
+          <EntitySet Name="tbl_ConstructionChemicalEnquiry" EntityType="BergerModel.tbl_ConstructionChemicalEnquiry" />
+          <EntitySet Name="tbl_HomePaintingEnquiry" EntityType="BergerModel.tbl_HomePaintingEnquiry" />
+          <EntitySet Name="tbl_IndustrialUsers_Enquiry" EntityType="BergerModel.tbl_IndustrialUsers_Enquiry" />
+          <EntitySet Name="tbl_ProductEnquiry" EntityType="BergerModel.tbl_ProductEnquiry" />
+          <EntitySet Name="tbl_UnderCoatEnquiry" EntityType="BergerModel.tbl_UnderCoatEnquiry" />
+          <AssociationSet Name="FK_CRMLeadMainStatus_CRMLeadMainStatus" Association="BergerModel.FK_CRMLeadMainStatus_CRMLeadMainStatus">
+            <End Role="CRMLeadMainStatu" EntitySet="CRMLeadMainStatus" />
+            <End Role="CRMLeadMainStatu1" EntitySet="CRMLeadMainStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMLeadSubStatus_CRMLeadMainStatus" Association="BergerModel.FK_CRMLeadSubStatus_CRMLeadMainStatus">
+            <End Role="CRMLeadMainStatu" EntitySet="CRMLeadMainStatus" />
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_AskConsultant_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_AskConsultant_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_AskConsultant" EntitySet="tbl_AskConsultant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_BusinessQuery_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_BusinessQuery_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_BusinessQuery" EntitySet="tbl_BusinessQuery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_ConstructionChemicalEnquiry" EntitySet="tbl_ConstructionChemicalEnquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_HomePaintingEnquiry" EntitySet="tbl_HomePaintingEnquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_IndustrialUsers_Enquiry" EntitySet="tbl_IndustrialUsers_Enquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ProductEnquiry_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_ProductEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_ProductEnquiry" EntitySet="tbl_ProductEnquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId" Association="BergerModel.FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="tbl_UnderCoatEnquiry" EntitySet="tbl_UnderCoatEnquiry" />
+          </AssociationSet>
+          <EntitySet Name="CRMFacebookLeads" EntityType="BergerModel.CRMFacebookLead" />
+          <AssociationSet Name="FK_CRMFacebookLead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMFacebookLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMFacebookLead" EntitySet="CRMFacebookLeads" />
+          </AssociationSet>
+          <EntitySet Name="CRMInstagramLeads" EntityType="BergerModel.CRMInstagramLead" />
+          <EntitySet Name="CRMLinkedinLeads" EntityType="BergerModel.CRMLinkedinLead" />
+          <AssociationSet Name="FK_CRMInstagramLead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMInstagramLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMInstagramLead" EntitySet="CRMInstagramLeads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMLinkedinLead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMLinkedinLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMLinkedinLead" EntitySet="CRMLinkedinLeads" />
+          </AssociationSet>
+          <EntitySet Name="crmVendorLeads" EntityType="BergerModel.crmVendorLead" />
+          <AssociationSet Name="FK_crmVendorLead_CRMLeadSubStatusId" Association="BergerModel.FK_crmVendorLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="crmVendorLead" EntitySet="crmVendorLeads" />
+          </AssociationSet>
+          <EntitySet Name="CRMFacebookECFLeads" EntityType="BergerModel.CRMFacebookECFLead" />
+          <AssociationSet Name="FK_CRMFacebookECFLead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMFacebookECFLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMFacebookECFLead" EntitySet="CRMFacebookECFLeads" />
+          </AssociationSet>
+          <EntitySet Name="CRMFacebookSBELeads" EntityType="BergerModel.CRMFacebookSBELead" />
+          <AssociationSet Name="FK_CRMFacebookSBELead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMFacebookSBELead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMFacebookSBELead" EntitySet="CRMFacebookSBELeads" />
+          </AssociationSet>
+          <EntitySet Name="CRMDailyhuntLeads" EntityType="BergerModel.CRMDailyhuntLead" />
+          <EntitySet Name="CRMGoogleLeads" EntityType="BergerModel.CRMGoogleLead" />
+          <AssociationSet Name="FK_CRMDailyhuntLead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMDailyhuntLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMDailyhuntLead" EntitySet="CRMDailyhuntLeads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRMGoogleLead_CRMLeadSubStatusId" Association="BergerModel.FK_CRMGoogleLead_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CRMGoogleLead" EntitySet="CRMGoogleLeads" />
+          </AssociationSet>
+          <EntitySet Name="CampaignBusinessQueries" EntityType="BergerModel.CampaignBusinessQuery" />
+          <AssociationSet Name="FK_CampaignBusinessQuery_CRMLeadSubStatusId" Association="BergerModel.FK_CampaignBusinessQuery_CRMLeadSubStatusId">
+            <End Role="CRMLeadSubStatu" EntitySet="CRMLeadSubStatus" />
+            <End Role="CampaignBusinessQuery" EntitySet="CampaignBusinessQueries" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CRMLeadMainStatu">
+          <Key>
+            <PropertyRef Name="CRMLeadMainStatusId" />
+          </Key>
+          <Property Type="Int32" Name="CRMLeadMainStatusId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CRMLeadMainStatus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsAcive" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CRMLeadMainStatus1" Relationship="BergerModel.FK_CRMLeadMainStatus_CRMLeadMainStatus" FromRole="CRMLeadMainStatu" ToRole="CRMLeadMainStatu1" />
+          <NavigationProperty Name="CRMLeadMainStatu1" Relationship="BergerModel.FK_CRMLeadMainStatus_CRMLeadMainStatus" FromRole="CRMLeadMainStatu1" ToRole="CRMLeadMainStatu" />
+          <NavigationProperty Name="CRMLeadSubStatus" Relationship="BergerModel.FK_CRMLeadSubStatus_CRMLeadMainStatus" FromRole="CRMLeadMainStatu" ToRole="CRMLeadSubStatu" />
+        </EntityType>
+        <EntityType Name="CRMLeadSubStatu">
+          <Key>
+            <PropertyRef Name="CRMLeadSubStatusId" />
+          </Key>
+          <Property Type="Int32" Name="CRMLeadSubStatusId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CRMLeadMainStatusId" Nullable="false" />
+          <Property Type="String" Name="CRMLeadSubStatus" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CRMLeadMainStatu" Relationship="BergerModel.FK_CRMLeadSubStatus_CRMLeadMainStatus" FromRole="CRMLeadSubStatu" ToRole="CRMLeadMainStatu" />
+          <NavigationProperty Name="tbl_AskConsultant" Relationship="BergerModel.FK_tbl_AskConsultant_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_AskConsultant" />
+          <NavigationProperty Name="tbl_BusinessQuery" Relationship="BergerModel.FK_tbl_BusinessQuery_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_BusinessQuery" />
+          <NavigationProperty Name="tbl_ConstructionChemicalEnquiry" Relationship="BergerModel.FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_ConstructionChemicalEnquiry" />
+          <NavigationProperty Name="tbl_HomePaintingEnquiry" Relationship="BergerModel.FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_HomePaintingEnquiry" />
+          <NavigationProperty Name="tbl_IndustrialUsers_Enquiry" Relationship="BergerModel.FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_IndustrialUsers_Enquiry" />
+          <NavigationProperty Name="tbl_ProductEnquiry" Relationship="BergerModel.FK_tbl_ProductEnquiry_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_ProductEnquiry" />
+          <NavigationProperty Name="tbl_UnderCoatEnquiry" Relationship="BergerModel.FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="tbl_UnderCoatEnquiry" />
+          <NavigationProperty Name="CRMFacebookLeads" Relationship="BergerModel.FK_CRMFacebookLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMFacebookLead" />
+          <NavigationProperty Name="CRMInstagramLeads" Relationship="BergerModel.FK_CRMInstagramLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMInstagramLead" />
+          <NavigationProperty Name="CRMLinkedinLeads" Relationship="BergerModel.FK_CRMLinkedinLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMLinkedinLead" />
+          <NavigationProperty Name="crmVendorLeads" Relationship="BergerModel.FK_crmVendorLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="crmVendorLead" />
+          <NavigationProperty Name="CRMFacebookECFLeads" Relationship="BergerModel.FK_CRMFacebookECFLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMFacebookECFLead" />
+          <NavigationProperty Name="CRMFacebookSBELeads" Relationship="BergerModel.FK_CRMFacebookSBELead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMFacebookSBELead" />
+          <NavigationProperty Name="CRMDailyhuntLeads" Relationship="BergerModel.FK_CRMDailyhuntLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMDailyhuntLead" />
+          <NavigationProperty Name="CRMGoogleLeads" Relationship="BergerModel.FK_CRMGoogleLead_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CRMGoogleLead" />
+          <NavigationProperty Name="CampaignBusinessQueries" Relationship="BergerModel.FK_CampaignBusinessQuery_CRMLeadSubStatusId" FromRole="CRMLeadSubStatu" ToRole="CampaignBusinessQuery" />
+        </EntityType>
+        <EntityType Name="tbl_AskConsultant">
+          <Key>
+            <PropertyRef Name="AskConsultantID" />
+          </Key>
+          <Property Type="Int32" Name="AskConsultantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DepartmentID" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Attachment1" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Attachment2" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Attachment3" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="Source" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_AskConsultant_CRMLeadSubStatusId" FromRole="tbl_AskConsultant" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_BusinessQuery">
+          <Key>
+            <PropertyRef Name="BusinessQueryID" />
+          </Key>
+          <Property Type="Int32" Name="BusinessQueryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DepartmentID" Nullable="false" />
+          <Property Type="Int32" Name="QueryCategoryID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Attachment" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Source" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Medium" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Campaign" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="Term" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Keyword" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="AcceptedTerms" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_BusinessQuery_CRMLeadSubStatusId" FromRole="tbl_BusinessQuery" ToRole="CRMLeadSubStatu" />
+          <Property Type="Boolean" Name="isReadyForHousePaint" />
+          <Property Type="String" Name="UrlReferrer" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_ConstructionChemicalEnquiry">
+          <Key>
+            <PropertyRef Name="ConstructionChemicalEnquiryID" />
+          </Key>
+          <Property Type="Int32" Name="ConstructionChemicalEnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileNo" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductID" />
+          <Property Type="String" Name="ProductName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quantity" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LocationID" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId" FromRole="tbl_ConstructionChemicalEnquiry" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_HomePaintingEnquiry">
+          <Key>
+            <PropertyRef Name="HomePaintingEnquiryID" />
+          </Key>
+          <Property Type="Int32" Name="HomePaintingEnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaintBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId" FromRole="tbl_HomePaintingEnquiry" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_IndustrialUsers_Enquiry">
+          <Key>
+            <PropertyRef Name="ProductEnquiryID" />
+          </Key>
+          <Property Type="Int32" Name="ProductEnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Category" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Product" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileNo" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductID" />
+          <Property Type="String" Name="ProductName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quantity" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LocationID" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId" FromRole="tbl_IndustrialUsers_Enquiry" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_ProductEnquiry">
+          <Key>
+            <PropertyRef Name="ProductEnquiryID" />
+          </Key>
+          <Property Type="Int32" Name="ProductEnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileNo" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductID" />
+          <Property Type="String" Name="ProductName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quantity" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LocationID" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Source" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Medium" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Campaign" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_ProductEnquiry_CRMLeadSubStatusId" FromRole="tbl_ProductEnquiry" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_UnderCoatEnquiry">
+          <Key>
+            <PropertyRef Name="UnderCoatEnquiryID" />
+          </Key>
+          <Property Type="Int32" Name="UnderCoatEnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileNo" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductID" />
+          <Property Type="String" Name="ProductName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quantity" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LocationID" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="0" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMSourceId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId" FromRole="tbl_UnderCoatEnquiry" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CRMLeadMainStatus_CRMLeadMainStatus">
+          <End Type="BergerModel.CRMLeadMainStatu" Role="CRMLeadMainStatu" Multiplicity="1" />
+          <End Type="BergerModel.CRMLeadMainStatu" Role="CRMLeadMainStatu1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadMainStatu">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Principal>
+            <Dependent Role="CRMLeadMainStatu1">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMLeadSubStatus_CRMLeadMainStatus">
+          <End Type="BergerModel.CRMLeadMainStatu" Role="CRMLeadMainStatu" Multiplicity="1" />
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadMainStatu">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Principal>
+            <Dependent Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadMainStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_AskConsultant_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_AskConsultant" Role="tbl_AskConsultant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_AskConsultant">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_BusinessQuery_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_BusinessQuery" Role="tbl_BusinessQuery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_BusinessQuery">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_ConstructionChemicalEnquiry" Role="tbl_ConstructionChemicalEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_ConstructionChemicalEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_HomePaintingEnquiry" Role="tbl_HomePaintingEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_HomePaintingEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_IndustrialUsers_Enquiry" Role="tbl_IndustrialUsers_Enquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_IndustrialUsers_Enquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ProductEnquiry_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_ProductEnquiry" Role="tbl_ProductEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_ProductEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.tbl_UnderCoatEnquiry" Role="tbl_UnderCoatEnquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="tbl_UnderCoatEnquiry">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CRMFacebookLead">
+          <Key>
+            <PropertyRef Name="CRMFacebookLeadId" />
+          </Key>
+          <Property Type="Int32" Name="CRMFacebookLeadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PostedOn" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Source" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Medium" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Campaign" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMLeadSyncStatusId" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMFacebookLead_CRMLeadSubStatusId" FromRole="CRMFacebookLead" ToRole="CRMLeadSubStatu" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="Term" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CRMFacebookLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMFacebookLead" Role="CRMFacebookLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMFacebookLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CRMInstagramLead">
+          <Key>
+            <PropertyRef Name="CRMInstagramLeadId" />
+          </Key>
+          <Property Type="Int32" Name="CRMInstagramLeadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PostedOn" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Source" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Medium" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Campaign" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMLeadSyncStatusId" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMInstagramLead_CRMLeadSubStatusId" FromRole="CRMInstagramLead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CRMLinkedinLead">
+          <Key>
+            <PropertyRef Name="CRMLinkedinLeadId" />
+          </Key>
+          <Property Type="Int32" Name="CRMLinkedinLeadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PostedOn" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Source" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Medium" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Campaign" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CRMLeadId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CRMLeadSyncStatusId" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="CRMLeadSubStatusId" />
+          <Property Type="DateTime" Name="CRMLeadStatusUpdatedOn" Precision="3" />
+          <Property Type="String" Name="CRMRecordId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMLinkedinLead_CRMLeadSubStatusId" FromRole="CRMLinkedinLead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CRMInstagramLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMInstagramLead" Role="CRMInstagramLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMInstagramLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMLinkedinLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMLinkedinLead" Role="CRMLinkedinLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMLinkedinLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="crmVendorLead">
+          <Key>
+            <PropertyRef Name="crmVendorLeadId" />
+          </Key>
+          <Property Name="crmVendorLeadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Medium" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Campaign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadSyncStatusId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRMLeadSubStatusId" Type="Int32" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CRMRecordId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SourceId" Type="Int32" />
+          <Property Name="IsVendor" Type="Boolean" />
+          <Property Name="UploadedBy" Type="Int32" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_crmVendorLead_CRMLeadSubStatusId" FromRole="crmVendorLead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_crmVendorLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.crmVendorLead" Role="crmVendorLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="crmVendorLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CRMFacebookECFLead">
+          <Key>
+            <PropertyRef Name="CRMFacebookECFLeadId" />
+          </Key>
+          <Property Name="CRMFacebookECFLeadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Medium" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Campaign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadSyncStatusId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRMLeadSubStatusId" Type="Int32" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CRMRecordId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="Term" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMFacebookECFLead_CRMLeadSubStatusId" FromRole="CRMFacebookECFLead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CRMFacebookECFLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMFacebookECFLead" Role="CRMFacebookECFLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMFacebookECFLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CRMFacebookSBELead">
+          <Key>
+            <PropertyRef Name="CRMFacebookSBELeadId" />
+          </Key>
+          <Property Name="CRMFacebookSBELeadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Medium" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Campaign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadSyncStatusId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRMLeadSubStatusId" Type="Int32" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CRMRecordId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="Term" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Zipcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMFacebookSBELead_CRMLeadSubStatusId" FromRole="CRMFacebookSBELead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CRMFacebookSBELead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMFacebookSBELead" Role="CRMFacebookSBELead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMFacebookSBELead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CRMDailyhuntLead">
+          <Key>
+            <PropertyRef Name="CRMDailyhuntLeadId" />
+          </Key>
+          <Property Name="CRMDailyhuntLeadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Medium" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Campaign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadSyncStatusId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRMLeadSubStatusId" Type="Int32" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CRMRecordId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMDailyhuntLead_CRMLeadSubStatusId" FromRole="CRMDailyhuntLead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CRMGoogleLead">
+          <Key>
+            <PropertyRef Name="CRMGoogleLeadId" />
+          </Key>
+          <Property Name="CRMGoogleLeadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PostedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Medium" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Campaign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMLeadSyncStatusId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRMLeadSubStatusId" Type="Int32" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CRMRecordId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="Term" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CRMGoogleLead_CRMLeadSubStatusId" FromRole="CRMGoogleLead" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CRMDailyhuntLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMDailyhuntLead" Role="CRMDailyhuntLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMDailyhuntLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRMGoogleLead_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CRMGoogleLead" Role="CRMGoogleLead" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CRMGoogleLead">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CampaignBusinessQuery">
+          <Key>
+            <PropertyRef Name="CampaignBusinessQueryId" />
+          </Key>
+          <Property Name="CampaignBusinessQueryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CampaignMasterId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IsValidPincode" Type="Boolean" Nullable="false" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Medium" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Campaign" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Term" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AcceptedTerms" Type="Boolean" />
+          <Property Name="CRMLeadId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRMSourceId" Type="Int32" />
+          <Property Name="CRMLeadSubStatusId" Type="Int32" />
+          <Property Name="CRMLeadStatusUpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="isReadyForHousePaint" Type="Boolean" />
+          <Property Name="UrlReferrer" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CRMRecordId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adgroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CRMCampaignLocationId" Type="Int32" />
+          <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CRMLeadSubStatu" Relationship="BergerModel.FK_CampaignBusinessQuery_CRMLeadSubStatusId" FromRole="CampaignBusinessQuery" ToRole="CRMLeadSubStatu" />
+          <Property Name="CRMPincode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CampaignBusinessQuery_CRMLeadSubStatusId">
+          <End Type="BergerModel.CRMLeadSubStatu" Role="CRMLeadSubStatu" Multiplicity="0..1" />
+          <End Type="BergerModel.CampaignBusinessQuery" Role="CampaignBusinessQuery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRMLeadSubStatu">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Principal>
+            <Dependent Role="CampaignBusinessQuery">
+              <PropertyRef Name="CRMLeadSubStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BergerModelStoreContainer" CdmEntityContainer="BergerEntities">
+          <EntitySetMapping Name="CRMLeadMainStatus">
+            <EntityTypeMapping TypeName="BergerModel.CRMLeadMainStatu">
+              <MappingFragment StoreEntitySet="CRMLeadMainStatus">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsAcive" ColumnName="IsAcive" />
+                <ScalarProperty Name="CRMLeadMainStatus" ColumnName="CRMLeadMainStatus" />
+                <ScalarProperty Name="CRMLeadMainStatusId" ColumnName="CRMLeadMainStatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMLeadSubStatus">
+            <EntityTypeMapping TypeName="BergerModel.CRMLeadSubStatu">
+              <MappingFragment StoreEntitySet="CRMLeadSubStatus">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSubStatus" ColumnName="CRMLeadSubStatus" />
+                <ScalarProperty Name="CRMLeadMainStatusId" ColumnName="CRMLeadMainStatusId" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AskConsultant">
+            <EntityTypeMapping TypeName="BergerModel.tbl_AskConsultant">
+              <MappingFragment StoreEntitySet="tbl_AskConsultant">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Attachment3" ColumnName="Attachment3" />
+                <ScalarProperty Name="Attachment2" ColumnName="Attachment2" />
+                <ScalarProperty Name="Attachment1" ColumnName="Attachment1" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="AskConsultantID" ColumnName="AskConsultantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_BusinessQuery">
+            <EntityTypeMapping TypeName="BergerModel.tbl_BusinessQuery">
+              <MappingFragment StoreEntitySet="tbl_BusinessQuery">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="UrlReferrer" ColumnName="UrlReferrer" />
+                <ScalarProperty Name="isReadyForHousePaint" ColumnName="isReadyForHousePaint" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="AcceptedTerms" ColumnName="AcceptedTerms" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="QueryCategoryID" ColumnName="QueryCategoryID" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="BusinessQueryID" ColumnName="BusinessQueryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ConstructionChemicalEnquiry">
+            <EntityTypeMapping TypeName="BergerModel.tbl_ConstructionChemicalEnquiry">
+              <MappingFragment StoreEntitySet="tbl_ConstructionChemicalEnquiry">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ConstructionChemicalEnquiryID" ColumnName="ConstructionChemicalEnquiryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_HomePaintingEnquiry">
+            <EntityTypeMapping TypeName="BergerModel.tbl_HomePaintingEnquiry">
+              <MappingFragment StoreEntitySet="tbl_HomePaintingEnquiry">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="PaintBy" ColumnName="PaintBy" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HomePaintingEnquiryID" ColumnName="HomePaintingEnquiryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_IndustrialUsers_Enquiry">
+            <EntityTypeMapping TypeName="BergerModel.tbl_IndustrialUsers_Enquiry">
+              <MappingFragment StoreEntitySet="tbl_IndustrialUsers_Enquiry">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ProductEnquiryID" ColumnName="ProductEnquiryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ProductEnquiry">
+            <EntityTypeMapping TypeName="BergerModel.tbl_ProductEnquiry">
+              <MappingFragment StoreEntitySet="tbl_ProductEnquiry">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ProductEnquiryID" ColumnName="ProductEnquiryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UnderCoatEnquiry">
+            <EntityTypeMapping TypeName="BergerModel.tbl_UnderCoatEnquiry">
+              <MappingFragment StoreEntitySet="tbl_UnderCoatEnquiry">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UnderCoatEnquiryID" ColumnName="UnderCoatEnquiryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMFacebookLeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMFacebookLead">
+              <MappingFragment StoreEntitySet="CRMFacebookLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMFacebookLeadId" ColumnName="CRMFacebookLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMInstagramLeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMInstagramLead">
+              <MappingFragment StoreEntitySet="CRMInstagramLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMInstagramLeadId" ColumnName="CRMInstagramLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMLinkedinLeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMLinkedinLead">
+              <MappingFragment StoreEntitySet="CRMLinkedinLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMLinkedinLeadId" ColumnName="CRMLinkedinLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="crmVendorLeads">
+            <EntityTypeMapping TypeName="BergerModel.crmVendorLead">
+              <MappingFragment StoreEntitySet="crmVendorLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+                <ScalarProperty Name="IsVendor" ColumnName="IsVendor" />
+                <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="crmVendorLeadId" ColumnName="crmVendorLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMFacebookECFLeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMFacebookECFLead">
+              <MappingFragment StoreEntitySet="CRMFacebookECFLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMFacebookECFLeadId" ColumnName="CRMFacebookECFLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMFacebookSBELeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMFacebookSBELead">
+              <MappingFragment StoreEntitySet="CRMFacebookSBELead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMFacebookSBELeadId" ColumnName="CRMFacebookSBELeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMDailyhuntLeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMDailyhuntLead">
+              <MappingFragment StoreEntitySet="CRMDailyhuntLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMDailyhuntLeadId" ColumnName="CRMDailyhuntLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMGoogleLeads">
+            <EntityTypeMapping TypeName="BergerModel.CRMGoogleLead">
+              <MappingFragment StoreEntitySet="CRMGoogleLead">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CRMLeadSyncStatusId" ColumnName="CRMLeadSyncStatusId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CRMGoogleLeadId" ColumnName="CRMGoogleLeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CampaignBusinessQueries">
+            <EntityTypeMapping TypeName="BergerModel.CampaignBusinessQuery">
+              <MappingFragment StoreEntitySet="CampaignBusinessQuery">
+                <ScalarProperty Name="CRMPincode" ColumnName="CRMPincode" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="CRMCampaignLocationId" ColumnName="CRMCampaignLocationId" />
+                <ScalarProperty Name="Adgroup" ColumnName="Adgroup" />
+                <ScalarProperty Name="CRMRecordId" ColumnName="CRMRecordId" />
+                <ScalarProperty Name="UrlReferrer" ColumnName="UrlReferrer" />
+                <ScalarProperty Name="isReadyForHousePaint" ColumnName="isReadyForHousePaint" />
+                <ScalarProperty Name="CRMLeadStatusUpdatedOn" ColumnName="CRMLeadStatusUpdatedOn" />
+                <ScalarProperty Name="CRMLeadSubStatusId" ColumnName="CRMLeadSubStatusId" />
+                <ScalarProperty Name="CRMSourceId" ColumnName="CRMSourceId" />
+                <ScalarProperty Name="CRMLeadId" ColumnName="CRMLeadId" />
+                <ScalarProperty Name="AcceptedTerms" ColumnName="AcceptedTerms" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="IsValidPincode" ColumnName="IsValidPincode" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CampaignMasterId" ColumnName="CampaignMasterId" />
+                <ScalarProperty Name="CampaignBusinessQueryId" ColumnName="CampaignBusinessQueryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="BergerDB">
+        <EntityTypeShape EntityType="BergerModel.CRMLeadMainStatu" Width="1.5" PointX="1.5" PointY="0.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="BergerModel.CRMLeadSubStatu" Width="1.5" PointX="0.75" PointY="20.125" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="BergerModel.tbl_AskConsultant" Width="1.5" PointX="3" PointY="4.125" Height="4.2879036458333353" />
+        <EntityTypeShape EntityType="BergerModel.tbl_BusinessQuery" Width="1.5" PointX="3" PointY="9.125" Height="5.2494108072916745" />
+        <EntityTypeShape EntityType="BergerModel.tbl_ConstructionChemicalEnquiry" Width="1.5" PointX="3" PointY="15.125" Height="4.2879036458333317" />
+        <EntityTypeShape EntityType="BergerModel.tbl_HomePaintingEnquiry" Width="1.5" PointX="3" PointY="20.125" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="BergerModel.tbl_IndustrialUsers_Enquiry" Width="1.5" PointX="3" PointY="24.5" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="BergerModel.tbl_ProductEnquiry" Width="1.5" PointX="3" PointY="29.875" Height="4.8648079427083424" />
+        <EntityTypeShape EntityType="BergerModel.tbl_UnderCoatEnquiry" Width="1.5" PointX="3" PointY="35.5" Height="4.2879036458333388" />
+        <AssociationConnector Association="BergerModel.FK_CRMLeadMainStatus_CRMLeadMainStatus" >
+          <ConnectorPoint PointX="2.0319230769230767" PointY="3.1148893229166674" />
+          <ConnectorPoint PointX="2.0319230769230767" PointY="3.3648893229166674" />
+          <ConnectorPoint PointX="2.4784615384615383" PointY="3.3648893229166674" />
+          <ConnectorPoint PointX="2.4784615384615383" PointY="3.1148893229166674" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_CRMLeadSubStatus_CRMLeadMainStatus" >
+          <ConnectorPoint PointX="1.6877510396634616" PointY="3.1148893229166674" />
+          <ConnectorPoint PointX="1.6877510396634616" PointY="20.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_AskConsultant_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="1.0243075450721153" PointY="20.125" />
+          <ConnectorPoint PointX="1.0243075450721153" PointY="6.3651025390625007" />
+          <ConnectorPoint PointX="1.6044177063301284" PointY="6.3651025390625" />
+          <ConnectorPoint PointX="1.7710843729967949" PointY="6.3651025390625007" />
+          <ConnectorPoint PointX="3" PointY="6.3651025390625007" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_BusinessQuery_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="2.0001280198317311" PointY="20.125" />
+          <ConnectorPoint PointX="2.0001280198317311" PointY="12.038157552083334" />
+          <ConnectorPoint PointX="3" PointY="12.038157552083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_ConstructionChemicalEnquiry_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="1.3560292923677886" PointY="20.125" />
+          <ConnectorPoint PointX="1.3560292923677886" PointY="17.3651025390625" />
+          <ConnectorPoint PointX="1.6044177063301284" PointY="17.3651025390625" />
+          <ConnectorPoint PointX="1.7710843729967949" PointY="17.3651025390625" />
+          <ConnectorPoint PointX="1.9167946864983978" PointY="17.3651025390625" />
+          <ConnectorPoint PointX="2.0834613531650645" PointY="17.3651025390625" />
+          <ConnectorPoint PointX="3" PointY="17.3651025390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_HomePaintingEnquiry_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="2.25" PointY="21.980499674479169" />
+          <ConnectorPoint PointX="3" PointY="21.980499674479169" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_IndustrialUsers_Enquiry_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="1.4492184375" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="1.4492184375" PointY="26.932403971354169" />
+          <ConnectorPoint PointX="1.7018269791666667" PointY="26.932403971354169" />
+          <ConnectorPoint PointX="1.8684936458333332" PointY="26.932403971354169" />
+          <ConnectorPoint PointX="1.9654993229166669" PointY="26.932403971354169" />
+          <ConnectorPoint PointX="2.1321659895833336" PointY="26.932403971354169" />
+          <ConnectorPoint PointX="3" PointY="26.932403971354169" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_ProductEnquiry_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="1.7851603125" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="1.7851603125" PointY="32.4035546875" />
+          <ConnectorPoint PointX="1.9654993229166669" PointY="32.4035546875" />
+          <ConnectorPoint PointX="2.1321659895833336" PointY="32.4035546875" />
+          <ConnectorPoint PointX="3" PointY="32.4035546875" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_tbl_UnderCoatEnquiry_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="1.06835671875" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="1.06835671875" PointY="37.7401025390625" />
+          <ConnectorPoint PointX="1.1754542447916667" PointY="37.7401025390625" />
+          <ConnectorPoint PointX="1.3421209114583332" PointY="37.7401025390625" />
+          <ConnectorPoint PointX="1.9654993229166669" PointY="37.7401025390625" />
+          <ConnectorPoint PointX="2.1321659895833336" PointY="37.7401025390625" />
+          <ConnectorPoint PointX="3" PointY="37.7401025390625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="BergerModel.CRMFacebookLead" Width="1.5" PointX="3" PointY="40.875" Height="4.2879036458333388" />
+        <AssociationConnector Association="BergerModel.FK_CRMFacebookLead_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="2.04883265625" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="2.04883265625" PointY="43.1151025390625" />
+          <ConnectorPoint PointX="3" PointY="43.1151025390625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="BergerModel.CRMInstagramLead" Width="1.5" PointX="3" PointY="46.375" Height="4.48020507812501" />
+        <EntityTypeShape EntityType="BergerModel.CRMLinkedinLead" Width="1.5" PointX="3" PointY="51.5" Height="4.48020507812501" />
+        <AssociationConnector Association="BergerModel.FK_CRMInstagramLead_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="1.258787578125" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="1.258787578125" PointY="48.615102539062505" />
+          <ConnectorPoint PointX="3" PointY="48.615102539062505" />
+        </AssociationConnector>
+        <AssociationConnector Association="BergerModel.FK_CRMLinkedinLead_CRMLeadSubStatusId" >
+          <ConnectorPoint PointX="0.877925859375" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="0.877925859375" PointY="53.740102539062505" />
+          <ConnectorPoint PointX="3" PointY="53.740102539062505" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="BergerModel.crmVendorLead" Width="1.5" PointX="3" PointY="56.75" />
+        <AssociationConnector Association="BergerModel.FK_crmVendorLead_CRMLeadSubStatusId" />
+        <EntityTypeShape EntityType="BergerModel.CRMFacebookECFLead" Width="1.5" PointX="3" PointY="63.75" />
+        <AssociationConnector Association="BergerModel.FK_CRMFacebookECFLead_CRMLeadSubStatusId" />
+        <EntityTypeShape EntityType="BergerModel.CRMFacebookSBELead" Width="1.5" PointX="3" PointY="70.75" />
+        <AssociationConnector Association="BergerModel.FK_CRMFacebookSBELead_CRMLeadSubStatusId" />
+        <EntityTypeShape EntityType="BergerModel.CRMDailyhuntLead" Width="1.5" PointX="3" PointY="77.375" />
+        <EntityTypeShape EntityType="BergerModel.CRMGoogleLead" Width="1.5" PointX="3" PointY="82.5" />
+        <AssociationConnector Association="BergerModel.FK_CRMDailyhuntLead_CRMLeadSubStatusId" />
+        <AssociationConnector Association="BergerModel.FK_CRMGoogleLead_CRMLeadSubStatusId" />
+        <EntityTypeShape EntityType="BergerModel.CampaignBusinessQuery" Width="1.5" PointX="3" PointY="89.5" />
+        <AssociationConnector Association="BergerModel.FK_CampaignBusinessQuery_CRMLeadSubStatusId" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
