@@ -88,7 +88,7 @@ namespace BergerLeadCRMSchedular.DB
                             .Where(d => d.CRMLeadId != null
                             ////&& (d.CRMLeadSubStatusId == null || d.CRMLeadSubStatu.CRMLeadMainStatu.CRMLeadMainStatus == CRMLeadStatus.CRM_LEAD_MAIN_STATUS)
                             //&& d.CRMLeadSubStatusId == null
-                            && d.CRMLeadSubStatusId != null && (d.CRMPincode == null || d.CRMPincode == "")
+                            && d.CRMLeadSubStatusId == null //&& (d.CRMPincode == null || d.CRMPincode == "")
                             ////&& (d.CRMSourceId == 70 || d.CRMSourceId == 78)
                             ////&& crmSourceIds.Contains(d.CRMSourceId.Value)
                             && d.CreatedDate >= fromDate && d.CreatedDate <= toDate

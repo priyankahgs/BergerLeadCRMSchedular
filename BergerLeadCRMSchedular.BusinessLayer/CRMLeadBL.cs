@@ -10,7 +10,7 @@ namespace BergerLeadCRMSchedular.BusinessLayer
         {
             try
             {
-                DateTime fromDate = DateTime.UtcNow.AddMinutes(330).AddDays(-15).Date.AddHours(00).AddMinutes(00).AddSeconds(00);
+                DateTime fromDate = DateTime.UtcNow.AddMinutes(330).AddDays(-30).Date.AddHours(00).AddMinutes(00).AddSeconds(00);
                 //DateTime fromDate = new DateTime(2023,06, 14).AddMinutes(330).Date.AddHours(00).AddMinutes(00).AddSeconds(00);
                 DateTime toDate = DateTime.UtcNow.AddMinutes(330).AddDays(-1).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
                 //DateTime toDate = new DateTime(2023, 06, 14).AddMinutes(330).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
